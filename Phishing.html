@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spot the Phishing Email</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .container {
+      max-width: 750px;
+      margin: 40px auto;
+      background: #161b22;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+      color: #f0f0f0;
+    }
+
+    .email {
+      background: #0d1117;
+      border: 1px solid #58a6ff;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+
+    .email:hover {
+      background: #1f2937;
+    }
+
+    #result {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🚨 Spot the Phishing Email</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="games.html">Back to Games</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <p>Can you identify which email is a phishing scam?</p>
+
+    <div class="email" onclick="checkAnswer(1)">
+      <p><strong>From:</strong> security@paypal-support.com</p>
+      <p><strong>Subject:</strong> Urgent: Account Suspended</p>
+      <p>Dear user, your PayPal account has been suspended. Click <a href="#">here</a> to verify your details immediately and restore access.</p>
+    </div>
+
+    <div class="email" onclick="checkAnswer(2)">
+      <p><strong>From:</strong> no-reply@paypal.com</p>
+      <p><strong>Subject:</strong> Your Monthly Activity Summary</p>
+      <p>Hello, your monthly summary is now available. You can log in securely at paypal.com to view your activity.</p>
+    </div>
+
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function checkAnswer(selected) {
+      const result = document.getElementById('result');
+      if (selected === 1) {
+        result.textContent = "✅ Correct! That's a phishing email pretending to be PayPal.";
+        result.style.color = "limegreen";
+      } else {
+        result.textContent = "❌ Nope! That one was legit. Look closely at sender & links next time.";
+        result.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>

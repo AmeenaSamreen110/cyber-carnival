@@ -1,0 +1,91 @@
+/* General body settings */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styling */
+header {
+  background: #161b22;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  color: #58a6ff;
+}
+
+/* Navigation bar */
+nav a {
+  margin: 0 10px;
+  color: #58a6ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #58a6ff;
+  color: #0d1117;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+/* Hero section and general layout */
+.hero, .features, .game-list, .leaderboard, .tips {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Feature cards on the home page */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.card {
+  background: #21262d;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+  min-width: 250px;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Leaderboard table */
+.leaderboard {
+  margin: 20px auto;
+  width: 80%;
+  border-collapse: collapse;
+}
+
+.leaderboard th, .leaderboard td {
+  border: 1px solid #58a6ff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Tips list */
+.tips li {
+  list-style: none;
+  padding: 10px 0;
+  font-size: 18px;
+}
+
+/* Footer */
+footer {
+  background: #161b22;
+  color: #8b949e;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}

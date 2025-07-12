@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cyber Carnival – Games Hub</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+      color: #f0f0f0;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 2px solid #58a6ff;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #58a6ff;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #58a6ff;
+    }
+
+    .game-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      padding: 40px 20px;
+    }
+
+    .game-card {
+      background: rgba(0, 0, 0, 0.5);
+      border: 2px solid #58a6ff;
+      border-radius: 12px;
+      width: 280px;
+      padding: 25px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .game-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(88, 166, 255, 0.4);
+    }
+
+    .game-card h3 {
+      color: #58a6ff;
+    }
+
+    .game-card a {
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #58a6ff;
+      color: #0d1117;
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+      background: rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎮 Cyber Carnival – Game Zone</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="games.html">Games</a>
+      <a href="leaderboard.html">Leaderboard</a>
+      <a href="resources.html">Resources</a>
+    </nav>
+  </header>
+
+  <section class="game-grid">
+    <div class="game-card">
+      <h3>🔐 Password Strength Tester</h3>
+      <p>Find out how secure your passwords really are!</p>
+      <a href="password.html">Play Now</a>
+    </div>
+    <div class="game-card">
+      <h3>🧠 Decode the Hacker</h3>
+      <p>Crack secret words scrambled by hackers!</p>
+      <a href="decode.html">Play Now</a>
+    </div>
+    <div class="game-card">
+      <h3>🚨 Spot the Phishing Email</h3>
+      <p>Can you identify which email is a scam?</p>
+      <a href="phishing.html">Play Now</a>
+    </div>
+    <div class="game-card">
+      <h3>🧪 Cyber Truth or Myth</h3>
+      <p>Test your knowledge about cybersecurity facts!</p>
+      <a href="myth.html">Play Now</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Cyber Carnival – Built with 💙 by Final Year BCA Student
+  </footer>
+</body>
+</html>
+

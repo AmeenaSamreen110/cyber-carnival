@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Decode the Hacker</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #161b22;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(88, 166, 255, 0.5);
+      text-align: center;
+    }
+
+    .puzzle {
+      font-size: 24px;
+      margin: 20px 0;
+      color: #58a6ff;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      width: 80%;
+      border-radius: 8px;
+      background: #0d1117;
+      color: white;
+      border: 1px solid #58a6ff;
+    }
+
+    .btn {
+      margin-top: 15px;
+      padding: 10px 25px;
+      font-size: 16px;
+      background-color: #58a6ff;
+      border: none;
+      border-radius: 8px;
+      color: #0d1117;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🧠 Decode the Hacker</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="games.html">Back to Games</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="puzzle" id="puzzle">Loading puzzle...</div>
+    <input type="text" id="answer" placeholder="Type your decoded word..." />
+    <br>
+    <button class="btn" onclick="checkAnswer()">Submit</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const puzzles = [
+      { scrambled: "OIPNT", answer: "POINT" },
+      { scrambled: "B1N4RY", answer: "BINARY" },
+      { scrambled: "E@ILMA", answer: "EMAIL" },
+      { scrambled: "YSPHGINI", answer: "PHISHING" },
+      { scrambled: "S@FWRAOTF", answer: "SOFTWARE" }
+    ];
+
+    let current = Math.floor(Math.random() * puzzles.length);
+    const puzzleDiv = document.getElementById("puzzle");
+    const answerInput = document.getElementById("answer");
+    const resultDiv = document.getElementById("result");
+
+    function loadPuzzle() {
+      puzzleDiv.textContent = "🔍 Decode this: " + puzzles[current].scrambled;
+    }
+
+    function checkAnswer() {
+      const userInput = answerInput.value.toUpperCase().trim();
+      if (userInput === puzzles[current].answer) {
+        resultDiv.textContent = "✅ Correct! You've cracked it!";
+        resultDiv.style.color = "limegreen";
+      } else {
+        resultDiv.textContent = "❌ Incorrect. Try again or refresh for new puzzle.";
+        resultDiv.style.color = "red";
+      }
+    }
+
+    loadPuzzle();
+  </script>
+</body>
+</html>

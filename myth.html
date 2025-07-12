@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cyber Truth or Myth</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      background: #161b22;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(88, 166, 255, 0.4);
+      text-align: center;
+      color: #f0f0f0;
+    }
+
+    .statement {
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: #58a6ff;
+    }
+
+    .buttons button {
+      margin: 10px;
+      padding: 12px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #58a6ff;
+      color: #0d1117;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    #feedback {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🧪 Cyber Truth or Myth</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="games.html">Back to Games</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="statement" id="statement">Loading...</div>
+    <div class="buttons">
+      <button onclick="checkAnswer('truth')">✅ Truth</button>
+      <button onclick="checkAnswer('myth')">❌ Myth</button>
+    </div>
+    <div id="feedback"></div>
+  </div>
+
+  <script>
+    const statements = [
+      { text: "Using '123456' as a password is safe if you don't share it.", answer: "myth" },
+      { text: "Public Wi-Fi can be dangerous for sensitive browsing.", answer: "truth" },
+      { text: "Hackers can access your webcam without you knowing.", answer: "truth" },
+      { text: "Updating software regularly helps fix security issues.", answer: "truth" },
+      { text: "You can only get viruses by downloading files.", answer: "myth" },
+      { text: "Phishing emails can look 100% real.", answer: "truth" },
+      { text: "Incognito mode hides everything from everyone.", answer: "myth" },
+      { text: "Two-factor authentication adds more security.", answer: "truth" }
+    ];
+
+    let currentIndex = 0;
+    const statementDiv = document.getElementById("statement");
+    const feedbackDiv = document.getElementById("feedback");
+
+    function loadStatement() {
+      statementDiv.textContent = statements[currentIndex].text;
+      feedbackDiv.textContent = '';
+    }
+
+    function checkAnswer(choice) {
+      const correct = statements[currentIndex].answer;
+      if (choice === correct) {
+        feedbackDiv.textContent = "✅ Correct!";
+        feedbackDiv.style.color = "limegreen";
+      } else {
+        feedbackDiv.textContent = "❌ Wrong! It was actually a " + correct + ".";
+        feedbackDiv.style.color = "red";
+      }
+
+      setTimeout(() => {
+        currentIndex++;
+        if (currentIndex < statements.length) {
+          loadStatement();
+        } else {
+          statementDiv.textContent = "🎉 You've completed the quiz!";
+          feedbackDiv.textContent = "";
+        }
+      }, 1500);
+    }
+
+    loadStatement();
+  </script>
+</body>
+</html>

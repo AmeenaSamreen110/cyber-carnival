@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cyber Carnival</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+      color: #f0f0f0;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 2px solid #58a6ff;
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      color: #58a6ff;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-5px); }
+      100% { transform: translateY(0px); }
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      color: #58a6ff;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .hero h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.1em;
+      color: #ddd;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 12px 30px;
+      background-color: #58a6ff;
+      color: #0d1117;
+      text-decoration: none;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .features {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 30px 20px;
+      gap: 20px;
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid #58a6ff;
+      padding: 20px;
+      width: 280px;
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 16px rgba(88, 166, 255, 0.4);
+    }
+
+    .card h3 {
+      color: #58a6ff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.3);
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎪 Cyber Carnival</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="games.html">Games</a>
+      <a href="leaderboard.html">Leaderboard</a>
+      <a href="resources.html">Resources</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Learn Cybersecurity the Fun Way! 🚀</h2>
+    <p>Gamified learning, mini-challenges, and quizzes await you. Play and protect yourself from digital dangers.</p>
+    <a class="btn" href="games.html">Start Playing 🎮</a>
+  </section>
+
+  <section class="features">
+    <div class="card">
+      <h3>💡 Interactive Games</h3>
+      <p>Play “Guess the Phish”, “Decode the Hacker” and more!</p>
+    </div>
+    <div class="card">
+      <h3>📊 Live Leaderboard</h3>
+      <p>Check your scores and compete with friends.</p>
+    </div>
+    <div class="card">
+      <h3>📚 Cyber Tips</h3>
+      <p>Read safety guides to protect your accounts, passwords, and privacy.</p>
+    </div>
+  </section>
+
+  <footer>
+    Made with 💙 for your Final Year BCA Project
+  </footer>
+</body>
+</html>
