@@ -2,7 +2,7 @@
 
 **Cyber Carnival** is an educational and interactive website designed to raise awareness about cybersecurity through fun, engaging mini-games. This project was developed as part of the final-year BCA mini project.
 
-🌐 **Live Website:** [Visit Cyber Carnival](https://AmeenaSamreen10.github.io/cyber-carnival/)  
+🌐 **Live Website:** [Visit Cyber Carnival](https://precious-buttercream-6d48bb.netlify.app/)  
 📁 **GitHub Repo:** [View Source Code](https://github.com/AmeenaSamreen10/cyber-carnival)
 
 ---
