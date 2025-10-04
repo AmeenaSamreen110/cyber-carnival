@@ -41,12 +41,6 @@ Each game is designed to teach basic security concepts in a playful and memorabl
 
 ---
 
-## 📸 Screenshots
-
-*Add screenshots here if needed by uploading images to the repo or using links.*
-
----
-
 ## 👩‍💻 Developer
 
 **Ameena Samreen**  
